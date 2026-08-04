@@ -1,0 +1,97 @@
+/* =============================================================================
+   Forge Athletic Club — design tokens
+   -----------------------------------------------------------------------------
+   Single source of truth for every raw design value in the app. Components must
+   consume these through Tailwind theme utilities or var(--token). No component
+   may hardcode a hex, a shadow, or a type size.
+
+   Identity: an industrial poster. Chalk paper, graphite ink, one scarlet signal,
+   one ice accent held back for data. Square corners, heavy rules, mono numerals.
+   ========================================================================== */
+
+:root {
+  /* --- Neutrals: "steel". Cool-neutral with a trace of warmth ------------- */
+  --steel-0: #ffffff;
+  --steel-25: #fbfaf8;
+  --steel-50: #f2f1ed;
+  --steel-100: #e8e6e1;
+  --steel-200: #d6d4ce;
+  --steel-300: #b7b5ae;
+  --steel-400: #8e8d87;
+  --steel-500: #6c6b66;
+  --steel-600: #56554f;
+  --steel-700: #3a3a36;
+  --steel-800: #262624;
+  --steel-900: #1a1a19;
+  --steel-950: #101010;
+
+  /* --- Brand: scarlet. 600 is the fill (5.9:1 on white), 500 is the signal
+         colour for rules, numerals and graphic marks. --------------------- */
+  --scarlet-50: #fff0ed;
+  --scarlet-100: #ffdad3;
+  --scarlet-200: #ffb2a5;
+  --scarlet-300: #ff8271;
+  --scarlet-400: #f85238;
+  --scarlet-500: #e62b1e;
+  --scarlet-600: #c41f14;
+  --scarlet-700: #9c1710;
+  --scarlet-800: #6f100b;
+
+  /* --- Accent: ice. Held back for capacity, availability and chart series - */
+  --ice-50: #e8fafc;
+  --ice-100: #c6f2f7;
+  --ice-300: #5cd7e5;
+  --ice-400: #22c3d6;
+  --ice-600: #0a7f8c;
+  --ice-700: #086673;
+
+  /* --- Status hues: muted, used as dots, chips and text only -------------- */
+  --status-active: #16794f;
+  --status-frozen: var(--ice-600);
+  --status-expired: #9a6400;
+  --status-cancelled: var(--steel-500);
+
+  /* --- Semantic surfaces -------------------------------------------------- */
+  --ink: var(--steel-950);
+  --chalk: var(--steel-50);
+  --paper: var(--steel-25);
+
+  /* --- Spacing (4px base) ------------------------------------------------- */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --section-y: clamp(3.5rem, 7vw, 6.5rem);
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --measure: 68ch;
+
+  /* --- Radii: square-shouldered on purpose -------------------------------- */
+  --radius: 0.25rem;
+  --radius-pill: 999px;
+
+  /* --- Borders ------------------------------------------------------------ */
+  --rule-hairline: 1px;
+  --rule-heavy: 2px;
+
+  /* --- Elevation: restrained. Structure comes from rules, not shadows ----- */
+  --shadow-flat: 0 1px 0 0 rgb(16 16 16 / 0.04);
+  --shadow-raised: 0 1px 2px 0 rgb(16 16 16 / 0.06), 0 4px 12px -4px rgb(16 16 16 / 0.08);
+  --shadow-overlay: 0 8px 24px -8px rgb(16 16 16 / 0.18), 0 2px 6px -2px rgb(16 16 16 / 0.1);
+
+  /* --- Motion ------------------------------------------------------------- */
+  --duration-fast: 120ms;
+  --duration-base: 220ms;
+  --duration-slow: 420ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
