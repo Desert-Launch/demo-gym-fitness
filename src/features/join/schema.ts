@@ -17,7 +17,9 @@ export const joinDetailsSchema = z.object({
     .regex(/^[+0-9 ()-]{7,20}$/, "Use digits, spaces, + and - only."),
   goal: z.enum(["strength", "conditioning", "weight", "competition", "unsure"]),
   startPreference: z.enum(["mornings", "lunch", "evenings", "weekends"]),
-  agreesToTerms: z.literal(true, {
+  // Modelled as a boolean that must be true, so the checkbox's unchecked state
+  // is still a valid form value — it just fails validation with a real message.
+  agreesToTerms: z.boolean().refine((value) => value, {
     error: "Tick the box to accept the club rules.",
   }),
 })
