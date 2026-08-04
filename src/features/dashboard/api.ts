@@ -1,4 +1,11 @@
-import { format, isAfter, parseISO, startOfWeek, subWeeks } from "date-fns"
+import {
+  format,
+  isAfter,
+  parseISO,
+  startOfWeek,
+  subDays,
+  subWeeks,
+} from "date-fns"
 
 import * as store from "@/lib/store"
 import { sleep } from "@/lib/store"
@@ -30,6 +37,12 @@ function monthlyValue(plan: Plan): number {
     case "year":
       return Math.round(plan.priceAed / 12)
   }
+}
+
+/** Throws the club away and re-seeds it. Wired to the admin sidebar footer. */
+export async function resetDemoData(): Promise<void> {
+  await sleep(180)
+  store.resetStore()
 }
 
 export async function fetchOverview(): Promise<DashboardOverview> {
@@ -76,7 +89,12 @@ export async function fetchOverview(): Promise<DashboardOverview> {
     return { week: format(weekStart, "d MMM"), joins }
   })
 
-  const lastWeekJoins = joinsByWeek.at(-1)?.joins ?? 0
+  // Rolling seven days, not the calendar week — on a Monday the calendar
+  // figure would always read zero.
+  const sevenDaysAgo = subDays(new Date(), 7)
+  const lastWeekJoins = members.filter((member) =>
+    isAfter(parseISO(member.joinedAt), sevenDaysAgo)
+  ).length
 
   return {
     activeMembers: active.length,

@@ -377,7 +377,12 @@ export function seedMembers(plans: Plan[]): Member[] {
             ? plans[2]
             : plans[3]
 
-    const joinedDaysAgo = Math.floor(rand() * 420) + 3
+    // Weighted towards recent sign-ups so the eight-week joins chart has
+    // something to show — a club this size adds two or three people a week.
+    const joinedDaysAgo =
+      rand() < 0.55
+        ? Math.floor(rand() * 56) + 1
+        : Math.floor(rand() * 380) + 57
     const joinedAt = subDays(today, joinedDaysAgo)
     const termDays =
       plan.billingPeriod === "day"
@@ -440,7 +445,7 @@ export function seedBookings(
     const midday = hour >= 11 && hour < 15
 
     const fillRate = peak
-      ? 0.66 + rand() * 0.38
+      ? 0.68 + rand() * 0.36
       : midday
         ? 0.2 + rand() * 0.28
         : 0.35 + rand() * 0.32
@@ -474,9 +479,14 @@ export function seedBookings(
 
     // A full class collects a short waitlist.
     if (taken.size >= gymClass.capacity) {
-      const waiting = 1 + Math.floor(rand() * 2)
+      const waiting = 1 + Math.floor(rand() * 3)
       for (let i = 0; i < waiting; i++) {
-        const member = bookable[Math.floor(rand() * bookable.length)]
+        let member = bookable[Math.floor(rand() * bookable.length)]
+        let guard = 0
+        while (taken.has(member.id) && guard < 12) {
+          member = bookable[Math.floor(rand() * bookable.length)]
+          guard++
+        }
         if (taken.has(member.id)) continue
         taken.add(member.id)
         bookings.push({
