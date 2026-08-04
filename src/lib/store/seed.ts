@@ -401,13 +401,17 @@ export function seedMembers(plans: Plan[]): Member[] {
 
     const handle = `${firstName}.${lastName.replace(/[^a-zA-Z]/g, "")}`.toLowerCase()
 
+    // UAE mobile: +971 5X XXX XXXX
+    const mobilePrefix = [50, 52, 54, 55, 56, 58][Math.floor(rand() * 6)]
+    const block = String(1000000 + Math.floor(rand() * 8999999))
+
     return {
       id: id(),
       membershipNo: `FRG-${String(1042 + index * 3).padStart(4, "0")}`,
       firstName,
       lastName,
       email: `${handle}@example.ae`,
-      phone: `+9715${String(20000000 + Math.floor(rand() * 9999999)).slice(0, 8)}`,
+      phone: `+971 ${mobilePrefix} ${block.slice(0, 3)} ${block.slice(3)}`,
       planId: plan.id,
       status,
       joinedAt: formatISO(joinedAt, { representation: "date" }),
