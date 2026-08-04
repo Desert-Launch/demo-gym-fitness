@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Archivo, Archivo_Black, JetBrains_Mono } from "next/font/google"
 
 import { Toaster } from "@/components/ui/sonner"
+import { Providers } from "./providers"
 
 import "./globals.css"
 
@@ -41,7 +42,7 @@ export default function RootLayout({
       <body
         className={`${archivo.variable} ${archivoBlack.variable} ${jetbrainsMono.variable}`}
       >
-        {children}
+        <Providers>{children}</Providers>
         <Toaster position="bottom-right" />
       </body>
     </html>
