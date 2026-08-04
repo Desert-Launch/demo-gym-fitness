@@ -74,7 +74,7 @@ export function Hero() {
 
             <motion.p
               variants={item}
-              className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-400"
+              className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-500"
             >
               No joining fee · Freeze any time · Day passes welcome
             </motion.p>

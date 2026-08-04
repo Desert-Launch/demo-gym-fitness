@@ -51,27 +51,27 @@ export function TodaysSchedule({
       {classes.map((session) => (
         <li
           key={session.id}
-          className="flex flex-wrap items-center gap-x-6 gap-y-3 py-4"
+          className="grid grid-cols-[4.5rem_1fr] items-center gap-x-4 gap-y-3 py-4 sm:grid-cols-[4.5rem_1fr_11rem_3rem] sm:gap-x-6"
         >
-          <span className="tnum w-16 shrink-0 font-mono text-sm text-steel-600">
+          <span className="tnum font-mono text-sm text-steel-600">
             {formatClock(session.startTime)}
           </span>
-          <span className="min-w-0 flex-1">
+          <span className="min-w-0">
             <span className="display block text-sm text-ink">
               {session.type.name}
             </span>
-            <span className="text-xs text-steel-500">
+            <span className="block truncate text-xs text-steel-500">
               {session.trainer.name} · {session.studio}
             </span>
           </span>
-          <span className="w-44">
+          <span className="col-span-2 sm:col-span-1">
             <CapacityMeter
               bookedCount={session.bookedCount}
               capacity={session.capacity}
               spotsLeft={session.spotsLeft}
             />
           </span>
-          <span className="tnum w-14 shrink-0 text-right font-mono text-xs text-steel-500">
+          <span className="tnum hidden text-right font-mono text-xs text-steel-500 sm:block">
             {percent(session.bookedCount, session.capacity)}%
           </span>
         </li>

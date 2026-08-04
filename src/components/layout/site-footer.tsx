@@ -55,7 +55,7 @@ export function SiteFooter() {
 
           {COLUMNS.map((column) => (
             <nav key={column.title} aria-label={column.title}>
-              <h2 className="eyebrow text-steel-500">{column.title}</h2>
+              <h2 className="eyebrow text-steel-400">{column.title}</h2>
               <ul className="mt-5 space-y-3">
                 {column.links.map((link) => (
                   <li key={link.href}>
@@ -72,7 +72,7 @@ export function SiteFooter() {
           ))}
 
           <div>
-            <h2 className="eyebrow text-steel-500">Hours</h2>
+            <h2 className="eyebrow text-steel-400">Hours</h2>
             <ul className="mt-5 space-y-2 font-mono text-xs text-steel-300">
               {OPENING_HOURS.map((row) => (
                 <li key={row.days} className="flex justify-between gap-4">
@@ -92,7 +92,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-steel-800 pt-6 text-xs text-steel-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-steel-800 pt-6 text-xs text-steel-400 sm:flex-row sm:items-center sm:justify-between">
           <p>© {VENUE.year} Forge Athletic Club. Fictional club, demo build.</p>
           <p className="font-mono">
             Demo data resets on refresh — nothing here is real.

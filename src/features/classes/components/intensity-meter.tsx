@@ -10,7 +10,7 @@ export function IntensityMeter({
 }) {
   return (
     <div className={cn("flex items-center gap-2", className)}>
-      <span className="eyebrow text-steel-400">Effort</span>
+      <span className="eyebrow text-steel-500">Effort</span>
       <span className="flex gap-1" role="img" aria-label={`Intensity ${intensity} of 5`}>
         {[1, 2, 3, 4, 5].map((step) => (
           <span

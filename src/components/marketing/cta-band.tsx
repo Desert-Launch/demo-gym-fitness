@@ -19,7 +19,7 @@ export function CtaBand({
       <div className="container-forge flex flex-col gap-8 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
         <div className="max-w-2xl">
           <h2 className="display text-display-md">{title}</h2>
-          <p className="mt-4 max-w-[48ch] text-lead text-white/85">
+          <p className="mt-4 max-w-[48ch] text-lead text-white/90">
             {description}
           </p>
         </div>

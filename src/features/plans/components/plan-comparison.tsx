@@ -61,7 +61,7 @@ export function PlanComparison({ className }: { className?: string }) {
                     key={plan.id}
                     className={cn(
                       "border-b border-steel-200 px-4 py-4 text-sm",
-                      value === "—" ? "text-steel-400" : "text-steel-700",
+                      value === "—" ? "text-steel-500" : "text-steel-700",
                       plan.featured && "bg-paper"
                     )}
                   >

@@ -61,7 +61,11 @@ export function TrainerProfile({ slug }: { slug: string }) {
 
           <div className="mt-8 grid gap-10 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
-              <TrainerPortrait name={trainer.name} tone="brand" />
+              <TrainerPortrait
+                name={trainer.name}
+                tone="brand"
+                className="max-w-[360px]"
+              />
             </div>
 
             <div className="lg:col-span-8">
@@ -92,12 +96,23 @@ export function TrainerProfile({ slug }: { slug: string }) {
                   </dd>
                 </div>
               </dl>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button asChild size="lg">
+                  <a href="#this-week">
+                    See this week&apos;s sessions <ArrowRight />
+                  </a>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <Link href="/join">Join the club</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-section">
+      <section id="this-week" className="scroll-mt-24 py-section">
         <div className="container-forge">
           <div className="border-t-2 border-ink pt-5">
             <p className="eyebrow text-steel-500">This week with {trainer.name.split(" ")[0]}</p>

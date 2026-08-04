@@ -61,7 +61,7 @@ export function TrainerCard({
             {trainer.name}
           </h3>
           <p className="mt-1 text-xs text-steel-500">{trainer.headline}</p>
-          <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-steel-400">
+          <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-steel-500">
             {specialtyNames.join(" · ")}
           </p>
         </div>

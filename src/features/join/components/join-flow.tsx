@@ -528,7 +528,7 @@ function ConfirmationStep({
         </Button>
       </div>
 
-      <p className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-400">
+      <p className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-500">
         Demo build — no payment was taken and no email was sent.
       </p>
     </div>

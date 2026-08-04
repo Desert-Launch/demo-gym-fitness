@@ -101,7 +101,7 @@ export function ClassBookingsSheet({
                   onValueChange={setMemberId}
                   disabled={membersQuery.isPending}
                 >
-                  <SelectTrigger className="flex-1">
+                  <SelectTrigger className="flex-1" aria-label="Member to book in">
                     <SelectValue placeholder="Pick a member" />
                   </SelectTrigger>
                   <SelectContent className="max-h-64">
@@ -222,7 +222,7 @@ export function ClassBookingsSheet({
                     {cancelled.map((booking) => (
                       <li
                         key={booking.id}
-                        className="flex items-center justify-between gap-3 text-sm text-steel-400 line-through"
+                        className="flex items-center justify-between gap-3 text-sm text-steel-500 line-through"
                       >
                         <span className="truncate">{booking.memberName}</span>
                         <span className="font-mono text-[0.6875rem] no-underline">

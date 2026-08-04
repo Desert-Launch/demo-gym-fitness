@@ -166,7 +166,7 @@ export function Timetable() {
                         <span className="display text-base text-ink">
                           {day.short}
                         </span>
-                        <span className="font-mono text-[0.6875rem] text-steel-400">
+                        <span className="font-mono text-[0.6875rem] text-steel-500">
                           {formatDayDate(day.value)}
                         </span>
                       </span>

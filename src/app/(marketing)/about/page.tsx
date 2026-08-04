@@ -63,7 +63,7 @@ export default function AboutPage() {
           </div>
           <div className="lg:col-span-5">
             <div className="hatch-ink aspect-[4/3] w-full" aria-hidden />
-            <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-400">
+            <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-500">
               {VENUE.street} · {VENUE.area}
             </p>
           </div>

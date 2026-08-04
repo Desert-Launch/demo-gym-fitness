@@ -21,7 +21,7 @@ export function EmptyState({
         className
       )}
     >
-      {Icon ? <Icon className="size-6 text-steel-400" /> : null}
+      {Icon ? <Icon className="size-6 text-steel-500" /> : null}
       <p className="display mt-4 text-display-sm text-ink">{title}</p>
       <p className="mx-auto mt-3 max-w-[46ch] text-sm text-steel-600">
         {description}

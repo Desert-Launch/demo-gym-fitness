@@ -24,6 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
+import { SkipLink } from "@/components/layout/skip-link"
 import { useResetDemoData } from "@/features/dashboard"
 import { STAFF, useStaffSession } from "@/features/staff/store"
 import { cn, initials } from "@/lib/utils"
@@ -39,6 +40,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-dvh bg-chalk">
+      <SkipLink />
       <aside className="sticky top-0 hidden h-dvh w-[248px] shrink-0 flex-col border-r border-steel-800 bg-sidebar lg:flex">
         <SidebarContent />
       </aside>
@@ -100,7 +102,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
           <span className="display text-lg leading-none text-steel-25">Forge</span>
           <span aria-hidden className="h-[3px] w-5 bg-brand-bright" />
         </Link>
-        <p className="eyebrow mt-3 text-steel-500">Club admin</p>
+        <p className="eyebrow mt-3 text-steel-400">Club admin</p>
       </div>
 
       <nav aria-label="Admin" className="flex-1 px-3 py-4">
@@ -133,7 +135,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
       </nav>
 
       <div className="border-t border-steel-800 p-4">
-        <p className="text-xs leading-relaxed text-steel-500">
+        <p className="text-xs leading-relaxed text-steel-400">
           Demo data lives in memory. Resetting rebuilds the club from seed.
         </p>
         <Button

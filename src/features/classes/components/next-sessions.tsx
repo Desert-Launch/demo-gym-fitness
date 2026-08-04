@@ -33,7 +33,7 @@ export function NextSessions({ className }: { className?: string }) {
     >
       <div className="flex items-baseline justify-between gap-4 border-b border-steel-800 pb-4">
         <h2 className="eyebrow text-steel-400">On today</h2>
-        <span className="font-mono text-[0.6875rem] text-steel-500">
+        <span className="font-mono text-[0.6875rem] text-steel-400">
           {dayLabel(today)}
         </span>
       </div>
@@ -70,7 +70,7 @@ export function NextSessions({ className }: { className?: string }) {
                   <span className="display block text-sm text-steel-0">
                     {session.type.name}
                   </span>
-                  <span className="block truncate text-xs text-steel-500">
+                  <span className="block truncate text-xs text-steel-400">
                     {session.trainer.name}
                   </span>
                 </span>

@@ -168,7 +168,7 @@ function SessionStep({
         <p className="mt-4 max-w-[52ch] text-sm leading-relaxed text-steel-600">
           {session.type.description}
         </p>
-        <p className="mt-4 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-steel-400">
+        <p className="mt-4 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-steel-500">
           Bring: {session.type.equipment.toLowerCase()} are provided
         </p>
       </div>
@@ -413,7 +413,7 @@ function ConfirmationStep({
         </Button>
       </div>
 
-      <p className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-400">
+      <p className="mt-6 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-500">
         Demo build — the booking is written to the in-memory store, not sent anywhere.
       </p>
     </div>
@@ -434,7 +434,7 @@ function SessionSummary({ session }: { session: GymClassDetail }) {
 
         <ul className="mt-6 space-y-4 border-t border-steel-200 pt-6 text-sm">
           <li className="flex items-start gap-3">
-            <Clock className="mt-0.5 size-4 shrink-0 text-steel-400" />
+            <Clock className="mt-0.5 size-4 shrink-0 text-steel-500" />
             <span className="text-steel-700">
               {dayLabel(session.dayOfWeek)} {formatDayDate(session.dayOfWeek)} ·{" "}
               {formatClock(session.startTime)}
@@ -444,7 +444,7 @@ function SessionSummary({ session }: { session: GymClassDetail }) {
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <User className="mt-0.5 size-4 shrink-0 text-steel-400" />
+            <User className="mt-0.5 size-4 shrink-0 text-steel-500" />
             <span className="text-steel-700">
               {session.trainer.name}
               <span className="block text-xs text-steel-500">
@@ -453,7 +453,7 @@ function SessionSummary({ session }: { session: GymClassDetail }) {
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <MapPin className="mt-0.5 size-4 shrink-0 text-steel-400" />
+            <MapPin className="mt-0.5 size-4 shrink-0 text-steel-500" />
             <span className="text-steel-700">{session.studio}</span>
           </li>
         </ul>

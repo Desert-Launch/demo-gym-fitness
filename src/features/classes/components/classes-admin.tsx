@@ -201,7 +201,7 @@ export function ClassesAdmin() {
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
         <Select value={dayFilter} onValueChange={setDayFilter}>
-          <SelectTrigger className="w-[160px]">
+          <SelectTrigger className="w-[160px]" aria-label="Filter by day">
             <SelectValue placeholder="Any day" />
           </SelectTrigger>
           <SelectContent>
@@ -215,7 +215,7 @@ export function ClassesAdmin() {
         </Select>
 
         <Select value={typeFilter} onValueChange={setTypeFilter}>
-          <SelectTrigger className="w-[170px]">
+          <SelectTrigger className="w-[170px]" aria-label="Filter by class type">
             <SelectValue placeholder="Any class" />
           </SelectTrigger>
           <SelectContent>

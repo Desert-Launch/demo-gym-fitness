@@ -36,7 +36,7 @@ export function WizardRail({
                   ? "bg-brand text-white"
                   : state === "current"
                     ? "bg-steel-25 text-ink"
-                    : "border border-steel-300 text-steel-400"
+                    : "border border-steel-300 text-steel-500"
               )}
             >
               {state === "done" ? (
@@ -48,7 +48,7 @@ export function WizardRail({
             <span
               className={cn(
                 "text-xs font-medium uppercase tracking-[0.1em]",
-                state === "upcoming" && "text-steel-400"
+                state === "upcoming" && "text-steel-500"
               )}
             >
               {label}

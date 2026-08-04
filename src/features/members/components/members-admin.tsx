@@ -198,7 +198,7 @@ export function MembersAdmin() {
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
         <div className="relative w-full sm:w-[280px]">
-          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-steel-400" />
+          <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-steel-500" />
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
@@ -209,7 +209,7 @@ export function MembersAdmin() {
         </div>
 
         <Select value={planFilter} onValueChange={setPlanFilter}>
-          <SelectTrigger className="w-[170px]">
+          <SelectTrigger className="w-[170px]" aria-label="Filter by plan">
             <SelectValue placeholder="Any plan" />
           </SelectTrigger>
           <SelectContent>
@@ -223,7 +223,7 @@ export function MembersAdmin() {
         </Select>
 
         <Select value={statusFilter} onValueChange={setStatusFilter}>
-          <SelectTrigger className="w-[160px]">
+          <SelectTrigger className="w-[160px]" aria-label="Filter by status">
             <SelectValue placeholder="Any status" />
           </SelectTrigger>
           <SelectContent>

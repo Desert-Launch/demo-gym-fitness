@@ -42,6 +42,7 @@
   --color-chalk: var(--chalk);
   --color-paper: var(--paper);
 
+  --color-steel-0: var(--steel-0);
   --color-steel-25: var(--steel-25);
   --color-steel-50: var(--steel-50);
   --color-steel-100: var(--steel-100);

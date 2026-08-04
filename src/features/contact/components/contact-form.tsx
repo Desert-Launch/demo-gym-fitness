@@ -166,7 +166,7 @@ export function ContactForm() {
             <Send />
             {form.formState.isSubmitting ? "Sending…" : "Send message"}
           </Button>
-          <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-400">
+          <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-steel-500">
             Demo form — nothing is emailed anywhere.
           </p>
         </div>
