@@ -3,6 +3,7 @@ import { Archivo, Archivo_Black, JetBrains_Mono } from "next/font/google"
 
 import { Toaster } from "@/components/ui/sonner"
 import { Providers } from "./providers"
+import { DemoBar } from "@/components/layout/demo-bar"
 
 import "./globals.css"
 
@@ -26,6 +27,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  // Fictional business, invented contact details: never a search result.
+  robots: { index: false, follow: false },
   title: {
     default: "Forge Athletic Club — Dubai",
     template: "%s · Forge Athletic Club",
@@ -42,6 +45,7 @@ export default function RootLayout({
       <body
         className={`${archivo.variable} ${archivoBlack.variable} ${jetbrainsMono.variable}`}
       >
+        <DemoBar demo="Forge Athletic Club" slug="gym" />
         <Providers>{children}</Providers>
         <Toaster position="bottom-right" />
       </body>
