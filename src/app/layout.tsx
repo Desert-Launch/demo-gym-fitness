@@ -4,6 +4,7 @@ import { Archivo, Archivo_Black, JetBrains_Mono } from "next/font/google"
 import { Toaster } from "@/components/ui/sonner"
 import { Providers } from "./providers"
 import { DemoBar } from "@/components/layout/demo-bar"
+import { demoJsonLd, demoMetadata } from "@/lib/desert-launch"
 
 import "./globals.css"
 
@@ -27,14 +28,12 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  // Fictional business, invented contact details: never a search result.
-  robots: { index: false, follow: false },
   title: {
     default: "Forge Athletic Club — Dubai",
     template: "%s · Forge Athletic Club",
   },
-  description:
-    "Strength, conditioning and 60 coached classes a week in Al Quoz, Dubai. Train with coaches who know your name.",
+  // Share preview, robots, canonical host and the link back to the studio.
+  ...demoMetadata(),
 }
 
 export default function RootLayout({
@@ -45,7 +44,11 @@ export default function RootLayout({
       <body
         className={`${archivo.variable} ${archivoBlack.variable} ${jetbrainsMono.variable}`}
       >
-        <DemoBar demo="Forge Athletic Club" slug="gym" />
+        <DemoBar />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(demoJsonLd()) }}
+        />
         <Providers>{children}</Providers>
         <Toaster position="bottom-right" />
       </body>
