@@ -56,7 +56,7 @@ export function Hero() {
               variants={item}
               className="mt-8 max-w-[46ch] text-lead text-steel-600"
             >
-              Forge is a strength and conditioning club in Al Quoz. Sixty coached
+              A strength and conditioning club in Dubai. Sixty coached
               sessions a week, twelve people to a class, and coaches who know
               your name and your numbers.
             </motion.p>

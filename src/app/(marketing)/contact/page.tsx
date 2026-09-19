@@ -7,7 +7,7 @@ import { OPENING_HOURS, VENUE } from "@/lib/club"
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Find Forge Athletic Club in Al Quoz, Dubai. Opening hours, phone, email and a form for anything else.",
+    "Find the Demo Gym in Dubai. Opening hours, phone, email and a form for anything else.",
 }
 
 export default function ContactPage() {
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   <li className="flex gap-3">
                     <Phone className="mt-0.5 size-4 shrink-0 text-brand" />
                     <a
-                      href={`tel:${VENUE.phone.replace(/\s/g, "")}`}
+                      href={VENUE.phoneHref}
                       className="text-steel-700 underline-offset-4 hover:underline"
                     >
                       {VENUE.phone}

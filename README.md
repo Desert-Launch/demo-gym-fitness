@@ -1,7 +1,7 @@
-# Forge Athletic Club — gym & fitness demo
+# Demo Gym — gym & fitness demo
 
 A frontend-only marketing, membership and class-booking site for a fictional
-strength and conditioning club in Al Quoz, Dubai. Everything works — joining a
+strength and conditioning club in Dubai. Everything works — joining a
 plan, booking a class, running the club from the admin — but there is no
 backend, no database and no auth. All data lives in memory for the life of the
 browser tab.

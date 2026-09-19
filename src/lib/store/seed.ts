@@ -160,72 +160,72 @@ export function seedTrainers(): Trainer[] {
   const raw: Omit<Trainer, "id">[] = [
     {
       slug: "layla-al-marzooqi",
-      name: "Layla Al Marzooqi",
+      name: "Trainer 1",
       headline: "Head coach, conditioning",
-      bio: "Layla built the Forge conditioning method after eight years coaching rowing squads. She scales every interval on the spot, so the room finishes together.",
+      bio: "Built the club's conditioning method after eight years coaching rowing squads. Scales every interval on the spot, so the room finishes together.",
       specialties: ["hiit", "spin"],
       certifications: ["NASM-CPT", "Concept2 rowing coach"],
       yearsExperience: 11,
     },
     {
       slug: "omar-haddad",
-      name: "Omar Haddad",
+      name: "Trainer 2",
       headline: "Strength lead",
-      bio: "Omar competed in raw powerlifting for six years and now spends his time fixing other people's squats. Expect long warm-ups and very specific cues.",
+      bio: "Competed in raw powerlifting for six years and now spends the time fixing other people's squats. Expect long warm-ups and very specific cues.",
       specialties: ["strength"],
       certifications: ["NSCA-CSCS", "IPF club coach"],
       yearsExperience: 9,
     },
     {
       slug: "priya-raman",
-      name: "Priya Raman",
+      name: "Trainer 3",
       headline: "Yoga and mobility",
-      bio: "Priya teaches for people who train hard and stretch never. Her flows are short on chanting and long on hip work.",
+      bio: "Teaches for people who train hard and stretch never. The flows are short on chanting and long on hip work.",
       specialties: ["yoga", "mobility"],
       certifications: ["RYT-500", "FRC mobility specialist"],
       yearsExperience: 13,
     },
     {
       slug: "jack-whitfield",
-      name: "Jack Whitfield",
+      name: "Trainer 4",
       headline: "Boxing coach",
-      bio: "Twelve amateur bouts and a decade on the pads. Jack starts every class with footwork, whether you like it or not.",
+      bio: "Twelve amateur bouts and a decade on the pads. Starts every class with footwork, whether you like it or not.",
       specialties: ["boxing", "hiit"],
       certifications: ["England Boxing Level 2", "NASM-CPT"],
       yearsExperience: 10,
     },
     {
       slug: "noor-al-suwaidi",
-      name: "Noor Al Suwaidi",
+      name: "Trainer 5",
       headline: "Spin and endurance",
-      bio: "Noor rides the Hatta climbs on weekends and programmes the Thursday endurance ride. She coaches to watts, never to the music.",
+      bio: "Rides the mountain climbs on weekends and programmes the Thursday endurance ride. Coaches to watts, never to the music.",
       specialties: ["spin", "hiit"],
       certifications: ["Schwinn power certified", "Precision Nutrition L1"],
       yearsExperience: 7,
     },
     {
       slug: "marcus-bell",
-      name: "Marcus Bell",
+      name: "Trainer 6",
       headline: "Strength and conditioning",
-      bio: "Marcus spent six years with a rugby academy and brings the same warm-up. Newcomers get their first three sessions written out by hand.",
+      bio: "Spent six years with a rugby academy and brings the same warm-up. Newcomers get their first three sessions written out by hand.",
       specialties: ["strength", "hiit"],
       certifications: ["UKSCA accredited", "Kettlebell L2"],
       yearsExperience: 12,
     },
     {
       slug: "farah-kassem",
-      name: "Farah Kassem",
+      name: "Trainer 7",
       headline: "Movement and recovery",
-      bio: "A physiotherapist first, coach second. Farah runs the Sunday mobility session and the return-to-training programme.",
+      bio: "A physiotherapist first, coach second. Runs the Sunday mobility session and the return-to-training programme.",
       specialties: ["mobility", "yoga"],
       certifications: ["MSc Physiotherapy", "FRC mobility specialist"],
       yearsExperience: 8,
     },
     {
       slug: "diego-salas",
-      name: "Diego Salas",
+      name: "Trainer 8",
       headline: "Boxing and intervals",
-      bio: "Diego coached out of a Bogotá boxing gym for five years. His rounds are short, loud and technically strict.",
+      bio: "Coached out of a boxing gym for five years. The rounds are short, loud and technically strict.",
       specialties: ["boxing", "spin"],
       certifications: ["AIBA Level 1", "TRX certified"],
       yearsExperience: 6,
@@ -321,23 +321,7 @@ export function seedClasses(trainers: Trainer[]): GymClass[] {
 
 // --- Members ----------------------------------------------------------------
 
-const FIRST_NAMES = [
-  "Layla", "Omar", "Priya", "Jack", "Noor", "Marcus", "Farah", "Diego",
-  "Aisha", "Hassan", "Sofia", "Yousef", "Mariam", "Daniel", "Hind", "Rashid",
-  "Elena", "Khalid", "Amira", "Tom", "Zainab", "Sami", "Grace", "Faisal",
-  "Reem", "Adam", "Salma", "Nikhil", "Dana", "Bilal", "Chloe", "Tariq",
-  "Huda", "Liam", "Yara", "Karim", "Anna", "Saif", "Leen", "Ravi",
-]
-
-const LAST_NAMES = [
-  "Al Marzooqi", "Haddad", "Raman", "Whitfield", "Al Suwaidi", "Bell",
-  "Kassem", "Salas", "Al Balushi", "Nasser", "Rossi", "Al Hashimi",
-  "Darwish", "Okafor", "Al Zaabi", "Mansour", "Petrova", "Al Ali",
-  "Sharma", "Hughes", "Al Falasi", "Barakat", "Chen", "Al Mheiri",
-  "Fahim", "Novak", "Al Rashed", "Iyer", "Silva", "Al Nuaimi",
-  "Moretti", "Al Shamsi", "Hariri", "O'Neill", "Al Jaber", "Sobhy",
-  "Kowalski", "Al Ameri", "Farouk", "Nair",
-]
+// Numbered on purpose: a demo member is "Member 12", never a plausible person.
 
 const STATUS_MIX: MemberStatus[] = [
   ...Array<MemberStatus>(28).fill("active"),
@@ -362,8 +346,8 @@ export function seedMembers(plans: Plan[]): Member[] {
   const today = new Date()
 
   return Array.from({ length: 40 }, (_, index) => {
-    const firstName = FIRST_NAMES[index % FIRST_NAMES.length]
-    const lastName = LAST_NAMES[(index * 7 + 3) % LAST_NAMES.length]
+    const firstName = "Member"
+    const lastName = String(index + 1)
     const status = STATUS_MIX[index % STATUS_MIX.length]
 
     // Weighted so most of the club sits on monthly or quarterly.
@@ -399,19 +383,17 @@ export function seedMembers(plans: Plan[]): Member[] {
         ? subDays(today, Math.floor(rand() * 40) + 2)
         : addDays(today, Math.floor(rand() * termDays) + 1)
 
-    const handle = `${firstName}.${lastName.replace(/[^a-zA-Z]/g, "")}`.toLowerCase()
-
-    // UAE mobile: +971 5X XXX XXXX
+    // UAE mobile shape, last three always "xxx": never a number that rings.
     const mobilePrefix = [50, 52, 54, 55, 56, 58][Math.floor(rand() * 6)]
-    const block = String(1000000 + Math.floor(rand() * 8999999))
+    const block = String(1000 + Math.floor(rand() * 8999))
 
     return {
       id: id(),
-      membershipNo: `FRG-${String(1042 + index * 3).padStart(4, "0")}`,
+      membershipNo: `DEMO-${String(1042 + index * 3).padStart(4, "0")}`,
       firstName,
       lastName,
-      email: `${handle}@example.ae`,
-      phone: `+971 ${mobilePrefix} ${block.slice(0, 3)} ${block.slice(3)}`,
+      email: `member${index + 1}@example.com`,
+      phone: `+971 ${mobilePrefix} ${block.slice(0, 3)} ${block.slice(3)}xxx`,
       planId: plan.id,
       status,
       joinedAt: formatISO(joinedAt, { representation: "date" }),

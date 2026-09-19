@@ -29,7 +29,7 @@ export function formatDuration(minutes: number): string {
   return m === 0 ? `${h}h` : `${h}h ${m}m`
 }
 
-/** "Layla Al Marzooqi" -> "LA" */
+/** "Member 12" -> "M1" */
 export function initials(name: string): string {
   return name
     .split(" ")

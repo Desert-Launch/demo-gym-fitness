@@ -216,5 +216,5 @@ export function nextMembershipNo(): string {
     const value = Number(member.membershipNo.replace(/\D/g, ""))
     return Number.isFinite(value) && value > max ? value : max
   }, 1000)
-  return `FRG-${String(highest + 1).padStart(4, "0")}`
+  return `DEMO-${String(highest + 1).padStart(4, "0")}`
 }

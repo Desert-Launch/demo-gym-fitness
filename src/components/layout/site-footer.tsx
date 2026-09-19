@@ -32,12 +32,12 @@ export function SiteFooter() {
           <div>
             <Logo tone="chalk" />
             <p className="mt-5 max-w-[34ch] text-sm leading-relaxed text-steel-400">
-              A strength and conditioning club in Al Quoz. Sixty coached
+              A strength and conditioning club in Dubai. Sixty coached
               sessions a week, capped class sizes, coaches who know your name.
             </p>
             <div className="mt-6 flex gap-3">
               <a
-                href="tel:+97141234567"
+                href="/contact"
                 className="inline-flex size-10 items-center justify-center border border-steel-800 text-steel-300 transition-colors hover:border-brand-bright hover:text-brand-bright"
                 aria-label="Call the club"
               >
@@ -93,7 +93,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-steel-800 pt-6 text-xs text-steel-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {VENUE.year} Forge Athletic Club. Fictional club, demo build.</p>
+          <p>© {VENUE.year} Demo Gym. Fictional club, demo build.</p>
           <p className="font-mono">
             Demo data resets on refresh — nothing here is real.
           </p>

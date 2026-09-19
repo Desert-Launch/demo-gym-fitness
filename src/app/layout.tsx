@@ -29,8 +29,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Forge Athletic Club — Dubai",
-    template: "%s · Forge Athletic Club",
+    default: "Demo Gym — Dubai",
+    template: "%s · Demo Gym",
   },
   // Share preview, robots, canonical host and the link back to the studio.
   ...demoMetadata(),

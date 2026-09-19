@@ -20,7 +20,7 @@ export function Logo({
         "group inline-flex items-baseline gap-2 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring",
         className
       )}
-      aria-label="Forge Athletic Club — home"
+      aria-label="Demo Gym — home"
     >
       <span
         className={cn(
@@ -28,7 +28,7 @@ export function Logo({
           tone === "ink" ? "text-ink" : "text-steel-25"
         )}
       >
-        Forge
+        Demo
       </span>
       <span
         aria-hidden
@@ -40,7 +40,7 @@ export function Logo({
           tone === "ink" ? "text-steel-500" : "text-steel-400"
         )}
       >
-        Athletic Club
+        Gym
       </span>
     </Link>
   )

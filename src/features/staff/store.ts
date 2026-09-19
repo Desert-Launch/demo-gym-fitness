@@ -8,9 +8,9 @@ export interface StaffMember {
 
 /** The demo's fake sign-in. No auth, no server — just who the screen belongs to. */
 export const STAFF: StaffMember[] = [
-  { id: "staff-1", name: "Sara Kassem", role: "Club manager" },
-  { id: "staff-2", name: "Mo Al Hashimi", role: "Front desk" },
-  { id: "staff-3", name: "Layla Al Marzooqi", role: "Head coach" },
+  { id: "staff-1", name: "Manager 1", role: "Club manager" },
+  { id: "staff-2", name: "Receptionist 1", role: "Front desk" },
+  { id: "staff-3", name: "Trainer 1", role: "Head coach" },
 ]
 
 interface StaffSessionState {

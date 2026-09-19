@@ -4,7 +4,7 @@ import { BookingFlow } from "@/features/bookings/components/booking-flow"
 
 export const metadata: Metadata = {
   title: "Book a class",
-  description: "Hold your spot in a coached session at Forge Athletic Club.",
+  description: "Hold your spot in a coached session at the Demo Gym.",
 }
 
 export default async function BookClassPage({

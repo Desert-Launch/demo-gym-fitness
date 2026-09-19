@@ -9,7 +9,7 @@ import { OPENING_HOURS, VENUE } from "@/lib/club"
 export const metadata: Metadata = {
   title: "The club",
   description:
-    "How Forge Athletic Club works: capped classes, coached sessions, and a floor built for barbells in Al Quoz, Dubai.",
+    "How the Demo Gym works: capped classes, coached sessions, and a floor built for barbells in Dubai.",
 }
 
 const PRINCIPLES = [
@@ -49,7 +49,7 @@ export default function AboutPage() {
               Built in a warehouse, run like a team
             </h1>
             <p className="mt-6 max-w-[58ch] text-lead text-steel-600">
-              Forge opened in 2019 with four racks, two coaches and a rowing
+              The club opened in 2019 with four racks, two coaches and a rowing
               machine that never worked. The idea hasn&apos;t changed since:
               coached sessions, small groups, and a floor where people know each
               other&apos;s names.

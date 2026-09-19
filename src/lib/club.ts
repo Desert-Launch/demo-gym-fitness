@@ -4,11 +4,14 @@
  */
 
 export const VENUE = {
-  name: "Forge Athletic Club",
-  street: "Warehouse 14, Alserkal Avenue",
-  area: "Al Quoz 1, Dubai",
-  phone: "+971 4 123 4567",
-  email: "train@forgeathletic.ae",
+  name: "Demo Gym",
+  street: "1 Demo Street",
+  area: "Demo District, Dubai",
+  // Deliberately undialable: a demo must never ring a real line.
+  phone: "+971 4 555 0xxx",
+  /** Where a "call us" control goes: the number above must never dial. */
+  phoneHref: "/contact",
+  email: "hello@example.com",
   year: 2026,
 } as const
 

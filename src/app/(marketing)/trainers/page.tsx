@@ -6,7 +6,7 @@ import { TrainerGrid } from "@/features/trainers/components/trainer-grid"
 export const metadata: Metadata = {
   title: "Coaches",
   description:
-    "The coaches on the Forge floor — strength, conditioning, boxing, yoga and mobility specialists.",
+    "The coaches on the Demo Gym floor — strength, conditioning, boxing, yoga and mobility specialists.",
 }
 
 export default function TrainersPage() {

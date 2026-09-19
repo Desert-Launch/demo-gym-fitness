@@ -1,5 +1,5 @@
 /* =============================================================================
-   Forge Athletic Club — design tokens
+   Demo Gym — design tokens
    -----------------------------------------------------------------------------
    Single source of truth for every raw design value in the app. Components must
    consume these through Tailwind theme utilities or var(--token). No component

@@ -99,7 +99,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
           className="inline-flex items-baseline gap-2"
           onClick={onNavigate}
         >
-          <span className="display text-lg leading-none text-steel-25">Forge</span>
+          <span className="display text-lg leading-none text-steel-25">Demo Gym</span>
           <span aria-hidden className="h-[3px] w-5 bg-brand-bright" />
         </Link>
         <p className="eyebrow mt-3 text-steel-400">Club admin</p>
